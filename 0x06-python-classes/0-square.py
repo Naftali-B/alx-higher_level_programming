@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''0-square.py: Python script that creates a Square Class'''
+""" defining a class Square """
 
 class Square:
-        '''Creates an empty Square type'''
+        """ This is an empty class """
             pass
