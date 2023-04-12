@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""reads file without exceptions"""
+"""
+    reads file without exceptions
+"""
 
 def read_file(filename=""):
     """
