@@ -17,7 +17,7 @@ class Base:
     def __init__(self, id=None):
 
         """
-            initializes all instances
+            initializes instances
         """
         if id is not None:
             self.id = id
@@ -37,7 +37,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ writes the JSON representation of list_objs to a file """
+        """ writes the JSON representation to a file """
         filename = cls.__name__ + '.json'
         list_of_dicts = []
         if list_objs is not None:
@@ -49,14 +49,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """ returns the list of the JSON string representation json_string """
+        """ returns the list of the JSON string json_string """
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        """ returns an instance with all attributes already set """
+        """ returns an instance with all attributes set """
         if cls.__name__ == 'Rectangle':
             dummy_obj = cls(1, 1)
         if cls.__name__ == 'Square':
