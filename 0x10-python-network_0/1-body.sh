@@ -1,8 +1,3 @@
 #!/bin/bash
-
-url=$1
-response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
-
-if [[ $response -eq 200 ]]; then
-	  curl -s "$url"
-fi
+# script to display body of response of the GET request
+curl -sL "$1" -X GET
