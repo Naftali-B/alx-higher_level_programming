@@ -5,7 +5,7 @@ class Rectangle:
     """
     width (int)
     height (int)
-    The __init__: Initializes width and height for all instances
+    The __init__ nitializes width and height for all instances
     """
 
     def __init__(self, width=0, height=0):
@@ -21,10 +21,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """ getter function for width
-            Return:
-                width of rectangle
         """
+	getter function for width
+        Return:
+		width of rectangle
+        """
+
         return self._width
 
     @width.setter
@@ -39,9 +41,10 @@ class Rectangle:
 
     @property
     def height(self):
-        """ getter function for height
-            Return:
-                height of rectangle
+        """
+	getter function for height
+        Return:
+       		height of rectangle
         """
 
         return self._height
