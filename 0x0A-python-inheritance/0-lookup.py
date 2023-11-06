@@ -4,9 +4,11 @@
 
 def lookup(obj):
     """
-        Returns the list of available attributes and methods of obj
+        Returns the list
+        of available attributes and methods of obj
         Args:
-            obj: the object we are checking attributes and methods
+            obj: the object
+            that we are checking it's attributes and methods
         Return:
             the list of attributes and methods
     """
