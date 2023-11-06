@@ -1,16 +1,16 @@
-#!/usr/bin/python3
-""" 1-my_list: MyList """
-
+#!/usr/bin/env/python3
+"""class MyList that inherits from list"""
 
 class MyList(list):
-    """
-        class MyList
-        inherits from list
-        Methods:
-            print_sorted: prints sorted list
-    """
+	"""
+	Public instance method:
+		def print_sorted(self):
+		that prints the list,
+		but sorted (ascending sort)
+
+	You can assume that all the elements of the list will be of type int
+	"""
     def print_sorted(self):
-        """
-            prints list sorted in ascending order
-        """
-        print(sorted(self))
+        sorted_list = sorted(self)
+        print(sorted_list)
+
