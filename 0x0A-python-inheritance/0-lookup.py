@@ -2,8 +2,7 @@
 """ lookup: function that returns the list of available attributes and methods of obj """
 
 
-def lookup(obj)
-:
+def lookup(obj):
     """
         Returns the list
         of available attributes and methods of obj
