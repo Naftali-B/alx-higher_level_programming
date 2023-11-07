@@ -10,6 +10,6 @@ def read_file(filename=""):
         so python closes the file automatically
     """
 
-    with open(filename) as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
             print(line, end='')
