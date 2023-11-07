@@ -4,7 +4,8 @@
 
 
 def append_write(filename="", text=""):
-    """"If the file doesn’t exist, it should be created
+    """"
+    If the file doesn’t exist, it should be created
         must use the with statement
         Args: filename, text
         encoding: utf-8
@@ -13,4 +14,4 @@ def append_write(filename="", text=""):
 
     with open(filename, 'a', encoding='utf-8') as file:
         file.write(text)
-        return len(text)
+    return len(text)
