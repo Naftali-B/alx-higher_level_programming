@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-    """
-    Class Rectangle inherits from Base
+""" Class Rectangle inherits from Base
     Private instance attributes,
     each with its own public getter and setter:
     __width -> width
@@ -12,6 +11,7 @@
 
 
 from models.base import Base
+
 
 class Rectangle(Base):
     """
@@ -255,4 +255,3 @@ class Rectangle(Base):
             raise TypeError("{} must be an integer".format(name))
         if value < 0:
             raise ValueError("{} must be >= 0".format(name))
-
