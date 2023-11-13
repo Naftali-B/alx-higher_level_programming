@@ -14,7 +14,7 @@ from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
-        super()__init__(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -27,9 +27,9 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
-            raise ValueError("Width must be an integer")
+            raise TypeError("width must be an integer")
         elif value <= 0:
-            raise ValueError("Width must be > 0")
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -39,9 +39,9 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise ValueError("Height must be an integer")
+            raise TypeError("height must be an integer")
         elif value <= 0:
-            raise ValueError("Height must be > 0")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -51,9 +51,9 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         if not isinstance(value, int):
-            raise ValueError("X must be an integer")
+            raise TypeError("x must be an integer")
         elif value < 0:
-            raise ValueError("X must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -63,9 +63,30 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         if not isinstance(value, int):
-            raise ValueError("Y must be an integer")
+            raise TypeError("y must be an integer")
         elif value < 0:
-            raise ValueError("Y must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
 
+    def area(self):
+        return self.__width * self.__height
 
+    def display(self):
+        for _ in range(self.__y):
+            print()
+        for _ in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height
+        )
+
+    def to_dictionary(self):
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
