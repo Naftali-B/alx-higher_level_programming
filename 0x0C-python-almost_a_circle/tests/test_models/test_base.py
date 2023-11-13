@@ -121,6 +121,4 @@ class TestBaseInstantiation(unittest.TestCase):
             [{"id": 1, "width": 2, "height": 3, "x": 4, "y": 5},
              {"id": 6, "width": 7, "height": 8, "x": 9, "y": 10}])
         self.assertEqual(
-            jsonlist1[0],
-           
-
+            jsonlist1[0],)
