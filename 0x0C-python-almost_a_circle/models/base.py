@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
     """
     Class Base:
     private class attribute __nb_objects = 0
@@ -9,6 +11,7 @@
         
         This class will be the “base” of all other classes in this project.
     """
+
 
 Class Base(self):
     __nb_objects = 0
