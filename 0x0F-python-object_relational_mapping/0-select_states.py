@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+''' lists all states from the database hbtn_0e_0_usa '''
 
 if __name__ == "__main__":
     mysql_user = sys.argv[1]
